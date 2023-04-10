@@ -118,16 +118,6 @@ const Cards_flip = (callback) => {
 
                         if (current.length === 2) {
 
-                            document.body.style.pointerEvents = "none";
-
-                            let promise = function () {
-                                return new Promise(function (resolve) {
-                                    setTimeout(() => { resolve(Main_logic) },1000);
-                                })
-                            }
-
-                            function Main_logic() {
-
                                 console.log(current[1].current_value);
 
                                 document.body.style.pointerEvents = "auto";
@@ -169,11 +159,6 @@ const Cards_flip = (callback) => {
 
                                 current = [];
 
-                            }
-
-                            promise().then(function (func) {
-                                func();
-                            })
 
                         }
 
